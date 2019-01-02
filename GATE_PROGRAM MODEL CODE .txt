@@ -1,0 +1,93 @@
+// Enter 1 or 2 or 3 or 4 as a options of a Question
+// if u not attend the question press 0 it is not considered
+// You can evaluate yourself by have a answer key .. if ur answer is corrct enter 1 else 0
+// mark will be automatically calculated
+
+#include<stdio.h>
+int main()
+{
+	int e,g,s[65],n=1,x,i=0;
+	float mark=0.00;
+	char z[65];
+	while(n<=65)
+	{
+		if(n==1)
+		{printf(" ---------                     Welcome To Exam Session Of PART A : (5) One Marks                  --------------");
+		printf("\n");
+		printf("\n");
+		}
+		if(n==6)
+		{printf("----------                     Welcome To Exam Session Of PART A : (5) Two Marks                  --------------");
+		printf("\n");
+	    printf("\n");
+		}
+		if(n==11)
+		{printf("----------                     Welcome To Exam Session Of PART B : (25) One Marks                 --------------");
+		printf("\n");
+	    printf("\n");
+		}
+		if(n==36)
+	    {printf("----------                     Welcome To Exam Session Of PART C : (30) Two Marks                 --------------");
+		printf("\n");
+		printf("\n");
+		}
+		
+		printf(" Enter The Choice of %d Question : ",n);
+		scanf("%d",&x);
+		s[i]=x;
+		printf("\n");
+		i++;n++;
+	}
+	for(i=0;i<65;i++)
+	z[i]=s[i]+64;
+   printf("               -----------------------------------Thank You ------------------------------------\n");printf("\n");
+	    printf("Your Answers Will be Displayed Below one by one : \n");printf("\n");
+ printf("Evaluate Your Self ..Please Enter Either '1' or '0' To Evaluate :\n" );
+
+	for(e=1;e<=65;e++)
+	{
+		if(z[e-1]==64)
+		printf("Your Mark For a %d Question is 0 \n",e);
+		else
+		{
+			printf("Your Answer For a %d Question is %c ",e,z[e-1]);
+	  printf("\n");
+	 printf("Enter It is Right or Wrong : ");
+	  scanf("%d",&g);
+		}
+	  
+	  if(e>=1 && e<=5)
+	  {
+	  	 if(g==1)
+	  mark=mark+1;
+	   if(g==0)
+	  mark=mark-0.33;
+	  printf("\n");
+	}
+	
+	else  if (e>=11 && e<=35)
+	{ 	 if(g==1)
+	  mark=mark+1;
+	   if(g==0)
+	  mark=mark-0.33;
+	  printf("\n");
+	}
+
+	 else 
+	  {
+	  	 if(g==1)
+	  mark=mark+2;
+	  else if(g==0)
+	  mark=mark-0.66;
+	  printf("\n");
+	}
+g=100;
+}
+	printf("\n");
+	printf("                     Your Total Mark For This Test is %f : ",mark);
+	printf("\n");printf("\n");printf("\n");
+	printf("               -----------------------------------Thank You ------------------------------------\n");
+	printf("\n");
+	
+	return 0;
+}
