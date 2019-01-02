@@ -1,0 +1,9 @@
+import mysql as sql
+from mysql import connector
+conn=sql.connector.connect(host="localhost",user="root",password="enter your password",database="datas")
+pointer=conn.cursor()
+pointer.execute("select * from user_datas")
+a=pointer.fetchall()
+for i in a:
+    print(i)
+conn.close()

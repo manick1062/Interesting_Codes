@@ -1,0 +1,12 @@
+import smtplib as gmail
+conn=gmail.SMTP("smtp.gmail.com",587)
+conn.starttls()
+a=input("Enter Your User Name : ")
+b=input("Enter Your Password  : ")
+conn.login(a,b)
+c=input("Enter Your Client Mail Id :")
+msg=input("Enter Your Message to Send")
+conn.sendmail(a,c,msg)
+conn.quit()
+
+

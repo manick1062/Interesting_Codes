@@ -1,0 +1,28 @@
+#include<stdio.h>
+int reverse(int n)
+{
+	int r=0,a;
+	while(n)
+	{
+		a=n%10;
+	r=a+(r*10);
+	n=n/10;
+	}
+	return r;
+	
+	
+}
+int main()
+{
+	int n,x;
+	scanf("%d",&n);
+ k:    x=n+reverse(n);
+    if((x==reverse(x)))
+    printf("%d",x);
+    else
+    {
+    	n=x;goto k;
+	}
+	//printf("%d",x);
+	
+}

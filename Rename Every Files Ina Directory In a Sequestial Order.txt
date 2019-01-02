@@ -1,0 +1,12 @@
+import os
+path_kudra_panni = "D://ICONS//"
+path = os.path.abspath(path_kudra_panni)
+i = 1
+for file_name in os.listdir(path):
+    new_filename = str(i) + file_name[-4:]
+    old_filename = path_kudra_panni + file_name
+    new_filename = path_kudra_panni + new_filename
+    os.rename(old_filename, new_filename)
+    i=i+1
+    
+print("Dai Gunda Job Done !")

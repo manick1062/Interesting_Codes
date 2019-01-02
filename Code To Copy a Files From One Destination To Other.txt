@@ -1,0 +1,15 @@
+import os
+import shutil
+Source=input("Enter The Source File Path : ")
+Destination=input("Enter The Destination File Path : ")
+s_path = os.path.abspath(Source)
+d_path = os.path.abspath(Destination)
+a=int(input("Enter the total number of photos :"))
+b=[]
+print("Enter the file Names : one by one")
+for i in range(0,a):
+    c=input("")
+    b.append(s_path+"\\"+c+".jpg")
+for j in b:
+    shutil.move(j,d_path+"\\")
+print("Dai Gunda Job Done !")
